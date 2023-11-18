@@ -1,6 +1,15 @@
-import { useState } from "react";
+import React from "react";
+import { Button, Button2, Button3, Button4 } from "./Button";
+
 function App() {
-  return <div>React</div>;
+  return (
+    <div>
+      <Button>Botão</Button>
+      <Button2>Outro botão</Button2>
+      <Button3 />
+      <Button4 />
+    </div>
+  );
 }
 
 export default App;
