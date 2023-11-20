@@ -5,6 +5,9 @@ const Checkbox = ({ label }: { label: string }) => {
   const [value, setValue] = React.useState(false); // Cria um estado chamado value e uma função para alterar o estado chamada setValue. O valor inicial do estado é false.
 
   //* > EventHandler.
+  /*
+    - É possível definir o elemento em que o EventHandler será usado. Assim o currentTarget será definido corretamente.
+  */
 
   // Criado uma função chamada handleChange que recebe um evento do tipo ChangeEvent, na função genérica do ChangeEvent é passado o tipo do elemento que disparou o evento, no caso o input, e o tipo do evento, no caso o ChangeEvent.
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -41,6 +44,11 @@ const Checkbox = ({ label }: { label: string }) => {
           type="checkbox"
           // O atributo checked é responsável por marcar ou não o checkbox, ele recebe o valor do estado value.
           checked={value}
+          //* > Função anônima.
+          /*
+            - Se definirmos uma função anônima diretamente no evento, o TypeScript conseguirá inferir o tipo de evento e o elemento do mesmo.
+          */
+
           // A cada mudança no input executa a função onChange, que desestrutura o evento e pega o elemento que disparou o evento(currentTarget), no caso o input, e atualiza o estado value com o valor do atributo checked do input.
           onChange={({ currentTarget }) => setValue(currentTarget.checked)}
         />

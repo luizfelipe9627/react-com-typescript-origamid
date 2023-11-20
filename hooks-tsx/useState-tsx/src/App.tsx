@@ -14,6 +14,10 @@ interface User {
 }
 
 function App() {
+  //* > useState.
+  /*
+    - Generics para definir os possíveis tipos: useState<null | User>(null).
+  */
   const [data, setData] = React.useState<null | User>(null); // Criado um estado chamado data e uma função para alterar o estado chamado setData, o estado inicial é null e pode ser do tipo User(objeto) ou null.
   const [total, setTotal] = React.useState(0); // Criado um estado chamado total e uma função para alterar o estado chamado setTotal, o estado inicial é 0(tipos primitivos não precisam de tipagem).
 

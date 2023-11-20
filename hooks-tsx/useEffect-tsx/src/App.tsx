@@ -11,6 +11,11 @@ function App() {
     };
   }
 
+  //* > useEffect.
+  /*
+    - Não precisamos anotar nenhum tipo especial no useEffect, ele é um hook que recebe uma função (função ativada no efeito) que retorna uma função (função ativada quando o componente é "desmontado").
+  */
+
   // Criado um efeito que será executado toda vez que o componente for montado/rederizado, irá executar a função anônima.
   React.useEffect(() => {
     console.log("Montou o componente"); // Executa toda vez que o componente for montado.

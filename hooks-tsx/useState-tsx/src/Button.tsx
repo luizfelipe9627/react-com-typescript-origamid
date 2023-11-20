@@ -1,6 +1,11 @@
 import React from "react";
 
 interface ButtonProps {
+  //* > React.Dispatch.
+  /*
+    - React.Dispatch<React.SetStateAction<tipo>> é o tipo da função que modifica o estado do hook useState.
+  */
+
   // React.Dispatch<React.SetStateAction<tipo>> é o tipo da função que modifica o estado do hook useState.
   incrementar: React.Dispatch<React.SetStateAction<number>>; // Define o estado como um número.
 }
