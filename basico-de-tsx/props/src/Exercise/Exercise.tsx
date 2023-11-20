@@ -3,7 +3,7 @@ import Input from "./Input";
 
 const Exercise = () => {
   const [data, setData] = React.useState(""); // Criado um estado chamado data e uma função para alterar o estado chamada setData. O estado inicia como uma string vazia.
-  
+
   return (
     <>
       <p>Início da viagem : {data}</p>
