@@ -1,5 +1,10 @@
 import React from "react";
 
+//* > Custom Hook.
+/*
+  - Devemos anotar os seus parâmetros e o retorno.
+*/
+
 // Criado um hook personalizado chamado useLocalStorage que recebe como parâmetro uma chave e um valor inicial, sendo ambos do tipo string(pois o localStorage só aceita string) e retornando um array sendo o primeiro elemento uma string e o segundo elemento uma função atualizadora.
 const useLocalStorage = (
   key: string,
