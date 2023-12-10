@@ -1,7 +1,14 @@
-import React from "react";
+import { UiContextProvider } from "./UiContext";
+import Header from "./Header";
+import Content from "./Content";
 
 function App() {
-  return <div>React</div>;
+  return (
+    <UiContextProvider>
+      <Header />
+      <Content />
+    </UiContextProvider>
+  );
 }
 
 export default App;
