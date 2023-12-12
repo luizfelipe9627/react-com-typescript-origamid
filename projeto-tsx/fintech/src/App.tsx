@@ -1,18 +1,21 @@
-import "./style.css";
-import React from "react";
+import "./styles/utils/all.css";
 import Sidenav from "./components/Sidenav";
 import Header from "./components/Header";
 import Summary from "./pages/Summary";
+import { DataContextProvider } from "./context/DataContext";
 
 function App() {
   return (
-    <div>
-      <Sidenav />
-      <main>
-        <Header />
-        <Summary />
-      </main>
-    </div>
+    // O DataContextProvider é o componente que vai prover os dados para os componentes filhos.
+    <DataContextProvider>
+      <div className="container">
+        <Sidenav />
+        <main>
+          <Header />
+          <Summary />
+        </main>
+      </div>
+    </DataContextProvider>
   );
 }
 
