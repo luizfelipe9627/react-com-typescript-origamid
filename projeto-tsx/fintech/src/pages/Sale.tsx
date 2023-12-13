@@ -16,7 +16,7 @@ const Sale = () => {
   return (
     <div>
       <div>
-        <div className="box mb">ID: {data.id}L</div>
+        <div className="box mb">ID: {data.id}</div>
         <div className="box mb">Nome: {data.nome}</div>
         <div className="box mb">
           Preço:{" "}
