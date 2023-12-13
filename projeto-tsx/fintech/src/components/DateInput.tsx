@@ -9,7 +9,7 @@ const generalStyle: React.CSSProperties = {
   borderRadius: "var(--gap)",
 };
 
-// Criado um objeto chamado labelStyles que é do tipo React.CSSProperties que é um objeto que contém as propriedades de um CSS.
+// Criado um objeto chamado labelStyles que é do tipo React.CSSProperties, responsável por estilizar o label.
 const labelStyle: React.CSSProperties = {
   display: "flex",
   marginBottom: "var(--gap-sm)",
@@ -18,7 +18,7 @@ const labelStyle: React.CSSProperties = {
   ...generalStyle,
 };
 
-// Criado um objeto chamado inputStyles que é do tipo React.CSSProperties que é um objeto que contém as propriedades de um CSS.
+// Criado um objeto chamado inputStyles que é do tipo React.CSSProperties, responsável por estilizar o input.
 const inputStyle: React.CSSProperties = {
   border: "none",
   fontFamily: "monospace",
@@ -32,6 +32,7 @@ type IDateInput = React.ComponentProps<"input"> & {
   label: string;
 };
 
+// Criado um componente chamado DateInput que recebe o parâmetro label do tipo string e todas as propriedades passadas para o componente.
 const DateInput = ({ label, ...props }: IDateInput) => {
   return (
     <div>
