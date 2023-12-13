@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 
 // Criado uma interface chamada IDataContext que recebe os tipos de dados que serão compartilhados com os componentes filhos que estiverem dentro do componente DataContext.Provider.
 interface IDataContext {
-  data: IVenda[] | null; // data recebe o tipo array(pois a API está dentro de uma array) IVenda ou null.
+  data: ISale[] | null; // data recebe o tipo array(pois a API está dentro de uma array) ISale ou null.
   loading: boolean;
   error: string | null;
   startDate: string;
@@ -46,7 +46,7 @@ export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
   const [endDate, setEndDate] = React.useState(getData(0)); // Criado um estado chamado endDate que recebe o tipo string e a função atualizadora chamada setEndDate. O estado começa com o retorno da função getData(a data atual) com o valor 0(dia atual).
 
   // Desestrutura o retorno do hook useFetch, que retorna um objeto com as propriedades data, loading e error, sendo que data recebe o tipo array(pois a API está dentro de uma array) IVenda ou null, loading recebe o tipo booleano e error recebe o tipo string ou null.
-  const { data, loading, error } = useFetch<IVenda[]>(
+  const { data, loading, error } = useFetch<ISale[]>(
     // A API recebe dois parâmetros, o primeiro é a data de início e o segundo é a data final, assim a API retorna os dados que estão entre essas duas datas.
     `https://data.origamid.dev/vendas/?inicio=${startDate}&final=${endDate}`,
   );

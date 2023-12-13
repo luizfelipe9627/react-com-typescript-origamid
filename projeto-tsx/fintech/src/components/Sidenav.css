@@ -1,0 +1,27 @@
+.sidenav li {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.sidenav li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-4);
+  border-radius: var(--gap);
+}
+
+.sidenav li a {
+  /* O flex 1 faz com que o link ocupe todo o espaço disponível. */
+  flex: 1;
+  font-size: 1.25rem;
+  color: var(--color-1);
+  padding: var(--gap-sm) 0;
+}
+
+.sidenav li:hover span {
+  background-color: var(--color-3);
+}

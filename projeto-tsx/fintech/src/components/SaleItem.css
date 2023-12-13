@@ -1,0 +1,17 @@
+.saleItem {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto 1fr;
+  gap: var(--gap);
+  margin-bottom: var(--gap-sm);
+}
+
+.saleItem div:last-child {
+  justify-self: end;
+}
+
+.saleItem a {
+  font-family: monospace;
+  /* Herda a cor do pai, nesse caso, a div saleItem. */
+  color: inherit;
+}

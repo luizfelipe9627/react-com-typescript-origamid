@@ -9,3 +9,51 @@ body {
   color: var(--color-2);
   background-color: var(--color-4);
 }
+
+.container {
+  display: grid;
+  padding: var(--gap);
+  gap: var(--gap);
+  /* Faz com que o grid tenha 2 colunas, sendo a primeira(o SideNAV) com 240px e o conteúdo com o resto do espaço */
+  grid-template-columns: 240px auto;
+}
+
+.box {
+  padding: var(--gap);
+  border-radius: var(--gap);
+  background-color: var(--color-5);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap);
+}
+
+/* Os seletores (>*) fala que todos os filhos de .flex terão flex: 1 */
+.flex>* {
+  flex: 1;
+}
+
+.mb {
+  margin-bottom: var(--gap);
+}
+
+.bg-1 {
+  background-color: var(--color-1);
+}
+
+.bg-2 {
+  background-color: var(--color-2);
+}
+
+.bg-3 {
+  background-color: var(--color-3);
+}
+
+.bg-4 {
+  background-color: var(--color-4);
+}
+
+.bg-5 {
+  background-color: var(--color-5);
+}

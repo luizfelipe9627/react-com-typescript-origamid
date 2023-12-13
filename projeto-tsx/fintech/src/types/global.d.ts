@@ -8,3 +8,6 @@ interface ISale {
   parcelas: number | null;
   data: string;
 }
+
+// Criado um type chamado ISaleWithoutDate que recebe o tipo de dado que será retornado da API, porém sem a data. O omit é usado para omitir(remover) um tipo de dado.
+type ISaleWithoutDate = Omit<ISale, "data">;

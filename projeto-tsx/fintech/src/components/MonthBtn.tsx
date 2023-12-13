@@ -1,15 +1,5 @@
+import "./MonthBtn.css";
 import { useData } from "../context/DataContext";
-
-// Criado um objeto chamado buttonStyle que é do tipo React.CSSProperties, responsável por estilizar o button.
-const buttonStyle: React.CSSProperties = {
-  padding: "var(--gap) var(--gap-sm)",
-  backgroundColor: "var(--color-3)",
-  borderRadius: "var(--gap)",
-  border: "none",
-  color: "var(--color-2)",
-  fontWeight: "600",
-  textTransform: "capitalize",
-};
 
 // Criado uma função chamada nameMonth que recebe o parâmetro n do tipo number, sendo uma função responsável por retornar o nome do mês atual mais o valor do parâmetro n.
 function nameMonth(n: number) {
@@ -50,8 +40,6 @@ const MonthBtn = ({ n }: { n: number }) => {
 
   return (
     <button
-      // O style do button recebe o objeto buttonStyle.
-      style={buttonStyle}
       // Quando o usuário clicar no botão, então executa a função setMonth passando o parâmetro n.
       onClick={() => setMonth({ n })}
     >

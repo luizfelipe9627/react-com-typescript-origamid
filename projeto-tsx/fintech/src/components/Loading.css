@@ -1,0 +1,14 @@
+.loading {
+  border: var(--gap-sm) solid var(--color-2);
+  border-right-color: var(--color-4);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
