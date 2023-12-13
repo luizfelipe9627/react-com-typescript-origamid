@@ -4,11 +4,10 @@ import MonthBtn from "./MonthBtn";
 const Months = () => {
   return (
     <div className="flex">
-      {/* O mês anterior do anterior é o mês -2, por isso o valor do parâmetro n é -2. */}
+      {/* Cria 4 botões, sendo o primeiro com o nome do mês atual, o segundo com o nome do mês anterior, o terceiro com o nome do mês anterior ao anterior e o quarto com o nome do mês posterior. Por exemplo: Novembro, Outubro, Setembro e Dezembro. */}
+      <MonthBtn n={-3} />
       <MonthBtn n={-2} />
-      {/* O mês anterior é o mês -1, por isso o valor do parâmetro n é -1. */}
       <MonthBtn n={-1} />
-      {/* O mês atual é o mês 0, por isso o valor do parâmetro n é 0. */}
       <MonthBtn n={0} />
     </div>
   );

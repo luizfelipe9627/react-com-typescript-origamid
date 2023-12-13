@@ -1,17 +1,6 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 
-// Criado uma interface chamada IVenda que recebe o tipo de dado que será retornado da API.
-interface IVenda {
-  id: number;
-  nome: string;
-  preco: number;
-  status: "pago" | "processando" | "falha";
-  pagamento: "boleto" | "cartao" | "pix";
-  parcelas: number | null;
-  data: string;
-}
-
 // Criado uma interface chamada IDataContext que recebe os tipos de dados que serão compartilhados com os componentes filhos que estiverem dentro do componente DataContext.Provider.
 interface IDataContext {
   data: IVenda[] | null; // data recebe o tipo array(pois a API está dentro de uma array) IVenda ou null.
