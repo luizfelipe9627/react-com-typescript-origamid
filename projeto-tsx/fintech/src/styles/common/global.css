@@ -57,3 +57,13 @@ body {
 .bg-5 {
   background-color: var(--color-5);
 }
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+}

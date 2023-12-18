@@ -15,3 +15,13 @@
   /* Herda a cor do pai, nesse caso, a div saleItem. */
   color: inherit;
 }
+
+@media (max-width: 700px) {
+  .saleItem {
+    grid-template-columns: 1fr;
+  }
+
+  .saleItem div:last-child {
+    justify-self: start;
+  }
+}

@@ -8,3 +8,9 @@
   color: var(--color-1);
   margin-bottom: var(--gap);
 }
+
+@media (max-width: 1000px) {
+  .summary {
+    flex-direction: column;
+  }
+}

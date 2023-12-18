@@ -1,6 +1,7 @@
 import "./Summary.css";
 import { useData } from "../context/DataContext";
 import Loading from "../components/Loading";
+import SalesChart from "../components/SalesChart";
 
 const Summary = () => {
   const { data, loading, error } = useData(); // Desestrutura o retorno do hook useData, pegando a propriedade data.
@@ -60,7 +61,10 @@ const Summary = () => {
         </div>
       </div>
 
-      <div className="box mb">Gráficos</div>
+      <div className="box mb">
+        {/* Chama o componente SalesChart passando o array data como propriedade data. */}
+        <SalesChart data={data} />
+      </div>
     </section>
   );
 };

@@ -1,3 +1,4 @@
+import "./DateRange.css";
 import DateInput from "./DateInput";
 import { useData } from "../context/DataContext";
 
@@ -6,7 +7,7 @@ const DateRange = () => {
   const { startDate, setStartDate, endDate, setEndDate } = useData(); // Desestrutura o retorno do hook useData, pegando as propriedades startDate, setStartDate, endDate e setEndDate.
 
   return (
-    <form className="box flex" onSubmit={(e) => e.preventDefault()}>
+    <form className="dateRange box flex" onSubmit={(e) => e.preventDefault()}>
       <DateInput
         label="Inicio"
         // O value é o valor do input, nesse caso, o valor do input é o valor do estado startDate.
